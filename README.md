@@ -1,3 +1,3 @@
 # java-maven
 
-prueba pipeline2
+prueba pipeline
