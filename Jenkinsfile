@@ -46,5 +46,22 @@ pipeline {
                 echo "Aquí luego integramos Slack si quieres"
             }
         }
+
+        post {
+        success {
+            emailext (
+                subject: "✅ Pipeline Éxitoso: ${currentBuild.fullDisplayName}",
+                body: "El pipeline ${currentBuild.fullDisplayName} terminó correctamente.\nRevisar: ${env.BUILD_URL}",
+                to: "tucorreo@dominio.com"
+            )
+        }
+        failure {
+            emailext (
+                subject: "❌ Pipeline Falló: ${currentBuild.fullDisplayName}",
+                body: "El pipeline ${currentBuild.fullDisplayName} falló.\nRevisar: ${env.BUILD_URL}",
+                to: "tucorreo@dominio.com"
+            )
+        }
+    }
     }
 }
