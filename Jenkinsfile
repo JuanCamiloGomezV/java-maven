@@ -60,7 +60,7 @@ pipeline {
             emailext (
                 subject: "❌ Pipeline Falló: ${currentBuild.fullDisplayName}",
                 body: "El pipeline ${currentBuild.fullDisplayName} falló.\nRevisar: ${env.BUILD_URL}",
-                to: "camilo12378@gmail.com"
+                to: "9d5879001@smtp-brevo.com"
             )
         }
     }
