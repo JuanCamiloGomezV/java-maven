@@ -43,7 +43,7 @@ pipeline {
 
         stage("Notifications") {
             steps {
-                echo "Aquí luego integramos Slack si quieres"
+                echo "Aquí luego integramos Slack si quieres 2"
             }
         }
     }
