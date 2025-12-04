@@ -48,7 +48,7 @@ pipeline {
         }
     }
 
-        post {
+    post {
         success {
             emailext (
                 subject: "✅ Pipeline Éxitoso: ${currentBuild.fullDisplayName}",
