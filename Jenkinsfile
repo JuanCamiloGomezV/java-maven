@@ -53,14 +53,14 @@ pipeline {
             emailext (
                 subject: "✅ Pipeline Éxitoso: ${currentBuild.fullDisplayName}",
                 body: "El pipeline ${currentBuild.fullDisplayName} terminó correctamente.\nRevisar: ${env.BUILD_URL}",
-                to: "camilo12378@gmail.com"
+                to: "vociwa7335@besenica.com"
             )
         }
         failure {
             emailext (
                 subject: "❌ Pipeline Falló: ${currentBuild.fullDisplayName}",
                 body: "El pipeline ${currentBuild.fullDisplayName} falló.\nRevisar: ${env.BUILD_URL}",
-                to: "camilo12378@gmail.com"
+                to: "vociwa7335@besenica.com"
             )
         }
     }
