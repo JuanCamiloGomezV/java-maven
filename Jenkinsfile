@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    triggers {
+        pollSCM('* * * * *')
+    }
+
     tools {
         jdk 'JDK17'
         maven 'Maven3'
@@ -43,7 +47,7 @@ pipeline {
 
         stage("Notifications") {
             steps {
-                echo "Aquí luego integramos Slack si quieres 2"
+                echo "Aquí luego integramos Slack si quieres"
             }
         }
     }
