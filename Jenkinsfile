@@ -46,6 +46,7 @@ pipeline {
                 echo "Aquí luego integramos Slack si quieres"
             }
         }
+    }
 
         post {
         success {
@@ -62,6 +63,5 @@ pipeline {
                 to: "tucorreo@dominio.com"
             )
         }
-    }
     }
 }
